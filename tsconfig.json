@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": [
+    "types.d.ts",
+    "./src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "allowArbitraryExtensions": true,
+    "allowImportingTsExtensions": true,
+    "module": "Preserve",
+    "noEmit": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

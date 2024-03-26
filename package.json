@@ -1,7 +1,181 @@
 {
-  "name": "eslint-plugin-jsx-a11y",
+  "name": "@jsxtools/eslint-plugin-jsx-a11y",
+  "type": "module",
   "version": "6.8.0",
-  "description": "Static AST checker for accessibility rules on JSX elements.",
+  "description": "Static AST checker for accessibility rules on JSX elements for flat ESLint Config.",
+  "exports": {
+    "./plugin": {
+      "import": "./lib/plugin.js",
+      "require": "./lib/plugin.cjs"
+    },
+    "./config/recommended": {
+      "import": "./lib/config/recommended.js",
+      "require": "./lib/config/recommended.cjs"
+    },
+    "./config/strict": {
+      "import": "./lib/config/strict.js",
+      "require": "./lib/config/strict.cjs"
+    },
+    "./rule/accessible-emoji": {
+      "import": "./lib/rule/accessible-emoji.js",
+      "require": "./lib/rule/accessible-emoji.cjs"
+    },
+    "./rule/alt-text": {
+      "import": "./lib/rule/alt-text.js",
+      "require": "./lib/rule/alt-text.cjs"
+    },
+    "./rule/anchor-ambiguous-text": {
+      "import": "./lib/rule/anchor-ambiguous-text.js",
+      "require": "./lib/rule/anchor-ambiguous-text.cjs"
+    },
+    "./rule/anchor-has-content": {
+      "import": "./lib/rule/anchor-has-content.js",
+      "require": "./lib/rule/anchor-has-content.cjs"
+    },
+    "./rule/anchor-is-valid": {
+      "import": "./lib/rule/anchor-is-valid.js",
+      "require": "./lib/rule/anchor-is-valid.cjs"
+    },
+    "./rule/aria-activedescendant-has-tabindex": {
+      "import": "./lib/rule/aria-activedescendant-has-tabindex.js",
+      "require": "./lib/rule/aria-activedescendant-has-tabindex.cjs"
+    },
+    "./rule/aria-props": {
+      "import": "./lib/rule/aria-props.js",
+      "require": "./lib/rule/aria-props.cjs"
+    },
+    "./rule/aria-proptypes": {
+      "import": "./lib/rule/aria-proptypes.js",
+      "require": "./lib/rule/aria-proptypes.cjs"
+    },
+    "./rule/aria-role": {
+      "import": "./lib/rule/aria-role.js",
+      "require": "./lib/rule/aria-role.cjs"
+    },
+    "./rule/aria-unsupported-elements": {
+      "import": "./lib/rule/aria-unsupported-elements.js",
+      "require": "./lib/rule/aria-unsupported-elements.cjs"
+    },
+    "./rule/autocomplete-valid": {
+      "import": "./lib/rule/autocomplete-valid.js",
+      "require": "./lib/rule/autocomplete-valid.cjs"
+    },
+    "./rule/click-events-have-key-events": {
+      "import": "./lib/rule/click-events-have-key-events.js",
+      "require": "./lib/rule/click-events-have-key-events.cjs"
+    },
+    "./rule/control-has-associated-label": {
+      "import": "./lib/rule/control-has-associated-label.js",
+      "require": "./lib/rule/control-has-associated-label.cjs"
+    },
+    "./rule/heading-has-content": {
+      "import": "./lib/rule/heading-has-content.js",
+      "require": "./lib/rule/heading-has-content.cjs"
+    },
+    "./rule/html-has-lang": {
+      "import": "./lib/rule/html-has-lang.js",
+      "require": "./lib/rule/html-has-lang.cjs"
+    },
+    "./rule/iframe-has-title": {
+      "import": "./lib/rule/iframe-has-title.js",
+      "require": "./lib/rule/iframe-has-title.cjs"
+    },
+    "./rule/img-redundant-alt": {
+      "import": "./lib/rule/img-redundant-alt.js",
+      "require": "./lib/rule/img-redundant-alt.cjs"
+    },
+    "./rule/interactive-supports-focus": {
+      "import": "./lib/rule/interactive-supports-focus.js",
+      "require": "./lib/rule/interactive-supports-focus.cjs"
+    },
+    "./rule/label-has-associated-control": {
+      "import": "./lib/rule/label-has-associated-control.js",
+      "require": "./lib/rule/label-has-associated-control.cjs"
+    },
+    "./rule/label-has-for": {
+      "import": "./lib/rule/label-has-for.js",
+      "require": "./lib/rule/label-has-for.cjs"
+    },
+    "./rule/lang": {
+      "import": "./lib/rule/lang.js",
+      "require": "./lib/rule/lang.cjs"
+    },
+    "./rule/media-has-caption": {
+      "import": "./lib/rule/media-has-caption.js",
+      "require": "./lib/rule/media-has-caption.cjs"
+    },
+    "./rule/mouse-events-have-key-events": {
+      "import": "./lib/rule/mouse-events-have-key-events.js",
+      "require": "./lib/rule/mouse-events-have-key-events.cjs"
+    },
+    "./rule/no-access-key": {
+      "import": "./lib/rule/no-access-key.js",
+      "require": "./lib/rule/no-access-key.cjs"
+    },
+    "./rule/no-aria-hidden-on-focusable": {
+      "import": "./lib/rule/no-aria-hidden-on-focusable.js",
+      "require": "./lib/rule/no-aria-hidden-on-focusable.cjs"
+    },
+    "./rule/no-autofocus": {
+      "import": "./lib/rule/no-autofocus.js",
+      "require": "./lib/rule/no-autofocus.cjs"
+    },
+    "./rule/no-distracting-elements": {
+      "import": "./lib/rule/no-distracting-elements.js",
+      "require": "./lib/rule/no-distracting-elements.cjs"
+    },
+    "./rule/no-interactive-element-to-noninteractive-role": {
+      "import": "./lib/rule/no-interactive-element-to-noninteractive-role.js",
+      "require": "./lib/rule/no-interactive-element-to-noninteractive-role.cjs"
+    },
+    "./rule/no-noninteractive-element-interactions": {
+      "import": "./lib/rule/no-noninteractive-element-interactions.js",
+      "require": "./lib/rule/no-noninteractive-element-interactions.cjs"
+    },
+    "./rule/no-noninteractive-element-to-interactive-role": {
+      "import": "./lib/rule/no-noninteractive-element-to-interactive-role.js",
+      "require": "./lib/rule/no-noninteractive-element-to-interactive-role.cjs"
+    },
+    "./rule/no-noninteractive-tabindex": {
+      "import": "./lib/rule/no-noninteractive-tabindex.js",
+      "require": "./lib/rule/no-noninteractive-tabindex.cjs"
+    },
+    "./rule/no-onchange": {
+      "import": "./lib/rule/no-onchange.js",
+      "require": "./lib/rule/no-onchange.cjs"
+    },
+    "./rule/no-redundant-roles": {
+      "import": "./lib/rule/no-redundant-roles.js",
+      "require": "./lib/rule/no-redundant-roles.cjs"
+    },
+    "./rule/no-static-element-interactions": {
+      "import": "./lib/rule/no-static-element-interactions.js",
+      "require": "./lib/rule/no-static-element-interactions.cjs"
+    },
+    "./rule/prefer-tag-over-role": {
+      "import": "./lib/rule/prefer-tag-over-role.js",
+      "require": "./lib/rule/prefer-tag-over-role.cjs"
+    },
+    "./rule/role-has-required-aria-props": {
+      "import": "./lib/rule/role-has-required-aria-props.js",
+      "require": "./lib/rule/role-has-required-aria-props.cjs"
+    },
+    "./rule/role-supports-aria-props": {
+      "import": "./lib/rule/role-supports-aria-props.js",
+      "require": "./lib/rule/role-supports-aria-props.cjs"
+    },
+    "./rule/scope": {
+      "import": "./lib/rule/scope.js",
+      "require": "./lib/rule/scope.cjs"
+    },
+    "./rule/tabindex-no-positive": {
+      "import": "./lib/rule/tabindex-no-positive.js",
+      "require": "./lib/rule/tabindex-no-positive.cjs"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -13,19 +187,17 @@
   "author": "Ethan Cohen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y"
+    "url": "https://github.com/jsxtools/eslint-plugin-jsx-a11y"
   },
-  "main": "lib/index.js",
   "scripts": {
     "prepack": "npmignore --auto --commentLines=autogenerated && npm run build",
-    "build": "rimraf lib && babel src --out-dir lib --copy-files",
+    "build": "node scripts/build.js",
     "create": "node ./scripts/create-rule",
-    "flow": "flow",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint --ext=js,mjs,cjs,ts,tsx .",
     "prepublish": "not-in-publish || npm run prepublishOnly",
-    "prepublishOnly": "safe-publish-latest && npm run lint && npm run flow && npm run jest",
-    "pretest": "npm run lint:fix && npm run flow",
+    "prepublishOnly": "safe-publish-latest && npm run lint && npm run jest",
+    "pretest": "npm run lint:fix",
     "test": "npm run jest",
     "posttest": "aud --production",
     "test:ci": "npm run jest -- --ci --runInBand",
@@ -36,26 +208,51 @@
     "version": "auto-changelog && git add CHANGELOG.md",
     "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
   },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aria-query": "^5.3.0",
+    "axe-core": "=4.7.0",
+    "axobject-query": "^3.2.1",
+    "damerau-levenshtein": "^1.0.8",
+    "emoji-regex": "^9.2.2",
+    "es-iterator-helpers": "^1.0.15",
+    "jsx-ast-utils": "^3.3.5",
+    "language-tags": "^1.0.9",
+    "minimatch": "^3.1.2",
+    "safe-regex-test": "^1.0.2"
+  },
+  "peerDependencies": {
+    "eslint": "^3 || ^4 || ^5 || ^6 || ^7 || ^8"
+  },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/plugin-transform-flow-strip-types": "^7.23.3",
+    "@babel/preset-typescript": "^7.24.1",
     "@babel/register": "^7.23.7",
+    "@types/eslint": "^8.56.6",
+    "@types/estree": "^1.0.5",
+    "@types/minimatch": "^5.1.2",
+    "@types/safe-regex-test": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "aud": "^2.0.4",
     "auto-changelog": "^2.4.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-add-module-exports": "^1.0.4",
     "babel-preset-airbnb": "^5.0.0",
-    "eslint": "^3 || ^4 || ^5 || ^6 || ^7 || ^8",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-doc-generator": "^1.6.1",
     "eslint-plugin-eslint-plugin": "^4.3.0",
     "eslint-plugin-flowtype": "^5.8.0 || ^8.0.3",
     "eslint-plugin-import": "^2.29.1",
     "estraverse": "^5.3.0",
+    "estree-jsx": "^0.0.1",
     "expect": "^24.9.0",
-    "flow-bin": "^0.147.0",
     "in-publish": "^2.0.1",
     "jackspeak": "=2.1.1",
     "jest": "^24.9.0",
@@ -66,34 +263,10 @@
     "rimraf": "^3.0.2",
     "safe-publish-latest": "^2.0.0",
     "semver": "^6.3.1",
-    "to-ast": "^1.0.0"
-  },
-  "engines": {
-    "node": ">=4.0"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@babel/runtime": "^7.23.9",
-    "aria-query": "^5.3.0",
-    "array-includes": "^3.1.7",
-    "array.prototype.flatmap": "^1.3.2",
-    "ast-types-flow": "^0.0.8",
-    "axe-core": "=4.7.0",
-    "axobject-query": "^3.2.1",
-    "damerau-levenshtein": "^1.0.8",
-    "emoji-regex": "^9.2.2",
-    "es-iterator-helpers": "^1.0.15",
-    "hasown": "^2.0.0",
-    "jsx-ast-utils": "^3.3.5",
-    "language-tags": "^1.0.9",
-    "minimatch": "^3.1.2",
-    "object.entries": "^1.1.7",
-    "object.fromentries": "^2.0.7",
-    "safe-regex-test": "^1.0.2",
-    "string.prototype.includes": "^2.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "^3 || ^4 || ^5 || ^6 || ^7 || ^8"
+    "to-ast": "^1.0.0",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.4.0",
+    "vite": "^5.2.6"
   },
   "jest": {
     "coverageReporters": [
